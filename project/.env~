@@ -1,0 +1,9 @@
+DEBUG = FALSE
+USERNAME = 'guard'
+ENGINE = 'django.db.backends.postgresql_psycopg2'
+HOST = 'checkpoint.devman.org'
+PORT = '5434'
+NAME = 'checkpoint'
+PASSWORD = 'osim5'
+KEY = 'REPLACE_ME'
+\

@@ -15,12 +15,12 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
-        'ENGINE': env.str('ENGINE'),
-        'HOST': env.str('HOST'),
-        'PORT': env.str('PORT'),
-        'NAME': env.str('NAME'),
+        'ENGINE': env.str('DB_ENGINE'),
+        'HOST': env.str('DB_HOST'),
+        'PORT': env.str('DB_PORT'),
+        'NAME': env.str('DB_NAME'),
         'USER': 'guard',
-	'PASSWORD': env.str('PASSWORD')
+	'PASSWORD': env.str('DB_PASSWORD')
     }
 }
 

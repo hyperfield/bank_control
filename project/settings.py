@@ -1,9 +1,17 @@
 import os
-#from dotenv import load_dotenv
 from environs import Env
 
 env = Env()
 env.read_env()
+
+print(os.getenv('DB_ENGINE'))
+print(os.getenv('DB_USERNAME'))
+print(os.getenv('DEBUG'))
+print(os.getenv('DB_HOST'))
+print(os.getenv('DB_PORT'))
+print(os.getenv('DB_NAME'))
+print(os.getenv('DB_PASSWORD'))
+print(os.getenv('KEY'))
 
 INSTALLED_APPS = ['datacenter']
 
@@ -19,7 +27,7 @@ DATABASES = {
         'HOST': env.str('DB_HOST'),
         'PORT': env.str('DB_PORT'),
         'NAME': env.str('DB_NAME'),
-        'USER': 'guard',
+        'USER': env.str('DB_USERNAME'),
 	'PASSWORD': env.str('DB_PASSWORD')
     }
 }

@@ -4,15 +4,6 @@ from environs import Env
 env = Env()
 env.read_env()
 
-print(os.getenv('DB_ENGINE'))
-print(os.getenv('DB_USERNAME'))
-print(os.getenv('DEBUG'))
-print(os.getenv('DB_HOST'))
-print(os.getenv('DB_PORT'))
-print(os.getenv('DB_NAME'))
-print(os.getenv('DB_PASSWORD'))
-print(os.getenv('KEY'))
-
 INSTALLED_APPS = ['datacenter']
 
 DEBUG = env.bool("DEBUG")
